@@ -1,0 +1,15 @@
+[build]
+    base = "./"
+    publish = "out"
+    command = "npm run deploy"
+    functions = "functions/"
+    ignore = "git diff --quiet HEAD^ HEAD sub_dir/"
+
+[[plugins]]
+    package = "@netlify/plugin-sitemap"
+
+[build.processing]
+    skip_processing = false
+
+[build.processing.images]
+    compress = true

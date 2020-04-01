@@ -1,15 +1,23 @@
 {
-  "name": "excel-fetcher",
+  "name": "next-netlify",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "deploy": "npm run build && npm run export"
   },
   "dependencies": {
     "next": "9.3.3",
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "jest": "^25.2.4",
+    "next-compose-plugins": "^2.2.0"
   }
 }
